@@ -1,0 +1,21 @@
+name: rebound
+version: git
+summary: Automatically fetch Stack Overflow results after compiler errors
+
+description: |
+  Rebound is a command-line tool that instantly fetches Stack Overflow
+  results when you get a compiler error. Just use the rebound command
+  to execute your file.
+
+grade: stable
+confinement: classic
+
+parts:
+  rebound:
+    plugin: python
+    python-version: python3
+    source: .
+
+apps:
+  rebound:
+    command: rebound
